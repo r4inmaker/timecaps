@@ -85,6 +85,8 @@ def get_args():
 # Downloading Raw Data
 def download_and_unzip(url, extract_to='.'):
     
+    print('Downloading and unzipping MIT-BIH dataset ...')
+
     if not os.path.exists(ROOT_PATH):
         http_response = urlopen(url)
         zipfile = ZipFile(BytesIO(http_response.read()))
